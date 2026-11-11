@@ -1,0 +1,16 @@
+# Settings for voice.py. Each change applies to the next recording.
+
+model = "large-v3-turbo"   # Whisper model
+device = "cuda"            # "cuda" or "cpu"
+compute_type = "float16"   # use "int8" on cpu
+language = "en"            # "" = detect the language automatically
+
+cleanup = true             # false = paste the raw Whisper text
+cleanup_model = "haiku"
+
+max_seconds = 600          # a recording stops by itself after 10 minutes
+overlay = true             # floating pill: red bars = recording, amber dots = transcribing
+beep = false               # high beep = start, low beep = stop, long low beep = error
+
+# Names and terms that the speech model must spell correctly.
+vocabulary = ["Herdr", "Claude Code"]
